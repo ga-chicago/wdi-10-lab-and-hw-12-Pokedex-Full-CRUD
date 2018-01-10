@@ -27,6 +27,11 @@ app.get('/:id', (req, res) => {
     res.render('show.ejs', { data: Pokemon[req.params.id] });
 });
 
+// NEW
+app.get('/new', (req, res) => {
+	res.render('new.ejs');
+})
+
 
 
 app.listen(3000, () => {
