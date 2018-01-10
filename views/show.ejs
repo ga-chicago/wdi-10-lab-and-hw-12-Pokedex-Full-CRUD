@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%=data.name; %></title>
+</head>
+<body>
+	<a href="/pokemon">Go back to the 151!</a>
+	<h1><%=data.name; %></h1>
+	<img src="<%=data.img; %>">
+	<br>
+	TYPE(S):
+	<br>
+	<ul>
+		<% for (let i = 0; i < data.type.length; i++) { %>
+		<li><%=data.type[i]; %></li> 
+		<% } %>
+	</ul>
+	<br>
+	HP:
+	<%=data.stats.hp; %>
+	<br>
+	ATTACK:
+	<%=data.stats.attack; %>
+	<br>
+	DEFENSE:
+	<%=data.stats.defense; %>
+	<br>
+	SPEED:
+	<%=data.stats.speed; %>
+	
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Home Page</title>
+</head>
+<body>
+	<h1>Gotta catch 'em all!</h1>
+	<ul>
+		<% for (let i = 0; i < data.length; i++) {%>
+		<li><%=data[i].name; %></li>
+		<a href="/pokemon/<%= i %>"><img src="<%=data[i].img; %>"></a>
+	<% } %>
+	</ul>
+</body>
+</html>
