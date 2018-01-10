@@ -15,6 +15,13 @@ router.get("/", (req, res) => {
 });
 
 
+// Create New Route
+router.get("/new", (req, res) => {
+	console.log("Hit the ceate new route");
+	res.send("Create new poke")
+})
+
+
 // character route
 router.get("/:index", (req, res) => {
 	// res.send(pokemon[req.params.index])
