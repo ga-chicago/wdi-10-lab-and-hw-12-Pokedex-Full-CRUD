@@ -1,0 +1,25 @@
+{
+  "name": "ls",
+  "version": "1.0.0",
+  "description": "![ga](http://mobbook.generalassemb.ly/ga_cog.png)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ga-chicago/wdi-10-lab-and-hw-12-Pokedex-Full-CRUD.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ga-chicago/wdi-10-lab-and-hw-12-Pokedex-Full-CRUD/issues"
+  },
+  "homepage": "https://github.com/ga-chicago/wdi-10-lab-and-hw-12-Pokedex-Full-CRUD#readme",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10"
+  }
+}
