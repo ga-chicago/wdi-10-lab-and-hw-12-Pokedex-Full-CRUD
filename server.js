@@ -32,7 +32,7 @@ app.get('/new', (req, res) => {
 
 // SHOW
 app.get('/:id', (req, res) => {
-    res.render('show.ejs', { data: Pokemon[req.params.id] });
+    res.render('show.ejs', { data: Pokemon[req.params.id], index: req.params.id });
 });
 
 //CREATE
@@ -76,9 +76,9 @@ app.post('/', (req, res) => {
 });
 
 //DELETE
-app.delete('/:index', (req, res) => {
+app.delete('/:id', (req, res) => {
 
-	Pokemon.splice(req.params.index, 1);
+	Pokemon.splice(req.params.id, 1);
 
 	res.redirect('/');
 });

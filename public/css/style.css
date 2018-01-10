@@ -1,6 +1,9 @@
 * {
 	border: 1px solid black;
 }
+#delete-form {
+	display: inline;
+}
 #list-container {
 	height: 700px;
 	overflow-y: scroll;
