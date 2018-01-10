@@ -16,6 +16,7 @@ app.use(express.static('public'));
 const pokemonController = require('./controllers/pokemonController')
 app.use('/pokemon/', pokemonController)
 
+// HOMEPAGE
 // Redirecting to Pokemon homepage
 app.get('/', (req, res) => {
 	res.redirect('/pokemon')
