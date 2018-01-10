@@ -30,10 +30,22 @@ app.get('/new', (req, res) => {
 });
 
 
+// EDIT
+app.get('/:id/edit', (req, res) => {
+
+	// YOU STILL NEED TO LOOP THE TYPES IN THE EDIT.EJS FILE DON'T FORGET
+
+	res.render('edit.ejs', {
+		data: Pokemon[req.params.id]
+	});
+});
+
+
 // SHOW
 app.get('/:id', (req, res) => {
     res.render('show.ejs', { data: Pokemon[req.params.id], index: req.params.id });
 });
+
 
 //CREATE
 app.post('/', (req, res) => {
@@ -74,6 +86,7 @@ app.post('/', (req, res) => {
 	res.redirect('/');
 	// res.send('it posted bitch')
 });
+
 
 //DELETE
 app.delete('/:id', (req, res) => {
