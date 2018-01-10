@@ -10,10 +10,15 @@
 
 <a href="/new">Add Pokemon</a> </br> </br>
 
-<% for (let i = 0; i < data.length; i++) { %>
-	<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> </br>
-<% } %>
-
+<div id="list-container">
+	<% for (let i = 0; i < data.length; i++) { %>
+		<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> 
+		<form action="/<%= i %>?_method=DELETE" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="submit" value="Delete this Pokemon">
+		</form> </br>
+	<% } %>
+</div>
 
 
 </body>

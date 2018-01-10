@@ -15,22 +15,27 @@ app.use(methodOverride('_method'))
 
 app.use(express.static('public'))
 
+
+
 // INDEX
 app.get('/', (req, res) => {
 	res.render('index.ejs', { data: Pokemon });
 	// res.send(Pokemon);
 });
 
+
 // NEW
 app.get('/new', (req, res) => {
 	res.render('new.ejs');
 });
+
 
 // SHOW
 app.get('/:id', (req, res) => {
     res.render('show.ejs', { data: Pokemon[req.params.id] });
 });
 
+//CREATE
 app.post('/', (req, res) => {
 	console.log(req.body);
 
@@ -68,6 +73,14 @@ app.post('/', (req, res) => {
 
 	res.redirect('/');
 	// res.send('it posted bitch')
+});
+
+//DELETE
+app.delete('/:index', (req, res) => {
+
+	Pokemon.splice(req.params.index, 1);
+
+	res.redirect('/');
 });
 
 
