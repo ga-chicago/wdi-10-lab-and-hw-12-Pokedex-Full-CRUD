@@ -1,0 +1,14 @@
+body {
+  width: 95vw;
+  background-color: lightblue;
+  color: white;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  text-align: center;
+}
+img {
+  height: 150px;
+  width: 150px;
+}
+ul {
+  list-style-type: none;
+}
