@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Pokemon</title>
+</head>
+<body>
+	<a href="/pokemon"> &lt; Go back to the 151!</a>
+	<h1>Edit <%=pokemon.name; %></h1>
+	<form>
+
+		NAME: <input type="text" name="name" value="<%=pokemon.name; %>">
+		<br>
+		<img src="<%=pokemon.img %>">
+		<br>
+		CHANGE IMAGE: <input type="text" name="img" value="enter link">
+		<br>
+		TYPE: <input type="text" name="type" value="<%=pokemon.type; %>">
+		<br>
+		HP: <input type="text" name="hp" value="<%=pokemon.stats.hp %>">
+		<br>
+		ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack%>">
+		<br>
+		DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense %>">
+		<br>
+		SPEED: <input type="text" name="speed" value="<%=pokemon.stats.speed%>">
+		<br>
+		<input type="submit" name="Update Pokemon">
+	</form>
+
+</body>
+</html>

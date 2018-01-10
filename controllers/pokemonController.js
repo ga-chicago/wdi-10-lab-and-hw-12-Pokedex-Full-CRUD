@@ -6,7 +6,7 @@ const pokemon = require('../models/pokemon.js');
 
 // INDEX
 router.get('/', (req, res) => {
-	console.log('hit the get route for index')
+	console.log('hit the get route for index');
 	res.render('index.ejs', { 
 		pokemon: pokemon 
 	});
@@ -14,13 +14,13 @@ router.get('/', (req, res) => {
 
 // NEW
 router.get('/new', (req, res) => {
-	console.log('hit the new route')
+	console.log('hit the new route');
 	res.render('new.ejs')
 })
 
 // POST - add the new pokemon
 router.post('/', (req, res) => {
-	console.log('hit the post route')
+	console.log('hit the post route');
 	req.body = {
 		name: req.body.name,
 		img: req.body.img,
@@ -37,13 +37,23 @@ router.post('/', (req, res) => {
 	res.redirect('/pokemon');
 })
 
+
 // SHOW
 router.get('/:id', (req, res) => {
-    console.log('hit the show route for this pokemon')
+    console.log('hit the show route for this pokemon');
     res.render('show.ejs', { 
     	pokemon: pokemon[req.params.id] 
     });
 });
+
+// EDIT
+router.get('/:id/edit', (req, res) => {
+	console.log('hit the edit route for this pokemon')
+	res.render('edit.ejs', {
+		pokemon: pokemon[req.params.id],
+		index: req.params.id
+	})
+})
 
 
 

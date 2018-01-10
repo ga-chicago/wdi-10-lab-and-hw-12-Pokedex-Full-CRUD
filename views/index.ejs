@@ -5,12 +5,14 @@
 </head>
 <body>
 	<h1>Gotta catch 'em all!</h1>
+	<a href="/pokemon/new">Create your own Pokemon!</a>
+	<br>
 	<ul>
 		<% for (let i = 0; i < pokemon.length; i++) {%>
 		<li><%=pokemon[i].name; %></li>
 		<a href="/pokemon/<%= i %>"><img src="<%=pokemon[i].img; %>"></a>
+		<a href="/pokemon/<%=i %>/edit">Edit Pokemon</a>
 	<% } %>
 	</ul>
-	<a href="/pokemon/new">Create your own Pokemon!</a>
 </body>
 </html>
