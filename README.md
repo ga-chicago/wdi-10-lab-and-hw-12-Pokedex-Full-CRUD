@@ -71,27 +71,6 @@ The app will use all seven RESTful Routes from our list:
   - DELETE `/pokemon/:id`
 
 
-## Starter Code
-
-```
-// server.js
-
-const express    = require('express'),
-    app        = express(),
-    Pokemon    = require('../models/pokemon.js');
-
-// INDEX
-app.get('/', (req, res) => {
-	res.render('index.ejs', { data: Pokemon });
-});
-
-// SHOW
-app.get('/:id', (req, res) => {
-    res.render('show.ejs', { data: Pokemon[req.params.id] });
-});
-
-```
-
 ## Data
 
 ### Notes on the Pokémon data and what to display
