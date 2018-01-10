@@ -7,6 +7,9 @@
 </head>
 <body>
 <h2>All Pokemon</h2>
+
+<a href="/new">Add Pokemon</a> </br> </br>
+
 <% for (let i = 0; i < data.length; i++) { %>
 	<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> </br>
 <% } %>

@@ -2,7 +2,7 @@
 	border: 1px solid black;
 }
 #picture-render {
-	width: 225px;
+	/*width: 225px;*/
 	height: 210px;
 }
 #show-container {
@@ -39,6 +39,7 @@
 	width: 90%;
 	height: 20%;
 	margin: 0 auto;
+	text-align: center;
 }
 .stat-container {
 	width: 30%;
