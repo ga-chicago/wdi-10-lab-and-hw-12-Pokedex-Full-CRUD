@@ -55,6 +55,23 @@ router.get('/:id/edit', (req, res) => {
 	})
 })
 
+// UPDATE
+router.put('/:id', (req, res) => {
+	console.log('hit the update route for this pokemon')
+	pokemon[req.params.id] = {
+		name: req.body.name,
+		img: req.body.img,
+		type: [req.body.type],
+		stats: {
+			hp: req.body.hp,
+			attack: req.body.attack,
+			defense: req.body.defense,
+			speed: req.body.speed
+		}
+	}
+	res.redirect('/pokemon')
+})
+
 
 
 module.exports = router;
