@@ -72,6 +72,14 @@ router.put('/:id', (req, res) => {
 	res.redirect('/pokemon')
 })
 
+// DELETE
+router.delete('/:id', (req, res) => {
+	console.log('hit the delet route for this pokemon')
+	const index = req.params.id
+	pokemon.splice(index, 1);
+	res.redirect('/pokemon');
+})
+
 
 
 module.exports = router;
