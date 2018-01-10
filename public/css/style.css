@@ -12,3 +12,9 @@ img {
 ul {
   list-style-type: none;
 }
+.poke-container {
+  border: 1px solid black;
+  width: 200px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}

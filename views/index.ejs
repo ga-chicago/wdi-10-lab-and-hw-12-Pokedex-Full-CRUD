@@ -8,11 +8,19 @@
 <body>
 	<h1>Pokemon Inventory</h1>
 
+	<form action="./new/" method="GET">
+		<button>Create New Pokemon</button>
+	</form>
+
 	<ul>
 		<% for(let i = 0; i < pokemon.length; i++) {%>
-			<li><a href="/pokemon/<%= i %>"><%= pokemon[i].name%></a></li>
-			<img src=<%= pokemon[i].img%>>
-
+			<div class="poke-container">
+				<li><a href="/pokemon/<%= i %>"><%= pokemon[i].name%></a></li>
+				<img src=<%= pokemon[i].img%>>
+				<form>
+					<button>Delete Pokemon</button>
+				</form>
+			</div>
 
 		<% } %>
 	</ul>
