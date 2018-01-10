@@ -9,10 +9,13 @@ const port = 3000
 
 
 
+const pokemonController = require("./controllers/pokemonController");
+app.use("/pokemon/", pokemonController);
+
 
 app.get('/', (req, res) => {
-	res.send("Hit main index")
-})
+	res.redirect("/pokemon");
+});
 
 
 
@@ -20,5 +23,5 @@ app.get('/', (req, res) => {
 
 
 app.listen(port, () => {
-	console.log("Listening on port 3000")
-})
+	console.log("Listening on port 3000");
+});
