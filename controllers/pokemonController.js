@@ -17,8 +17,12 @@ router.get("/", (req, res) => {
 
 // character route
 router.get("/:index", (req, res) => {
-	res.send(pokemon[req.params.index])
-	console.log("Hit the char route")
+	// res.send(pokemon[req.params.index])
+	// console.log("Hit the char route")
+
+	res.render("show.ejs", {
+		pokemon: pokemon[req.params.index]
+	})
 })
 
 
