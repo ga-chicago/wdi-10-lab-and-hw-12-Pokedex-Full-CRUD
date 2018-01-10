@@ -17,8 +17,10 @@ router.get("/", (req, res) => {
 
 // Create New Route
 router.get("/new", (req, res) => {
-	console.log("Hit the ceate new route");
-	res.send("Create new poke")
+	// console.log("Hit the ceate new route");
+	// res.send("Create new poke")
+
+	res.render("new.ejs")
 })
 
 
