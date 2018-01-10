@@ -23,6 +23,25 @@ router.get("/new", (req, res) => {
 	res.render("new.ejs")
 })
 
+router.post("/", (req, res) => {
+	
+	const newPoke = {
+		name: req.body.name,
+		img: req.body.img,
+		type: [
+			req.body.types,
+		],
+		stats: {
+			hp: req.body.hp,
+			attack: req.body.attack,
+			defense: req.body.attack
+		}
+	}
+
+	pokemon.push(newPoke)
+	res.redirect("/pokemon/")
+})
+
 
 // character route
 router.get("/:index", (req, res) => {
