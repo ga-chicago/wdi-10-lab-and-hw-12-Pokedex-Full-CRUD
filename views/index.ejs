@@ -6,9 +6,9 @@
 <body>
 	<h1>Gotta catch 'em all!</h1>
 	<ul>
-		<% for (let i = 0; i < data.length; i++) {%>
-		<li><%=data[i].name; %></li>
-		<a href="/pokemon/<%= i %>"><img src="<%=data[i].img; %>"></a>
+		<% for (let i = 0; i < pokemon.length; i++) {%>
+		<li><%=pokemon[i].name; %></li>
+		<a href="/pokemon/<%= i %>"><img src="<%=pokemon[i].img; %>"></a>
 	<% } %>
 	</ul>
 	<a href="/pokemon/new">Create your own Pokemon!</a>
