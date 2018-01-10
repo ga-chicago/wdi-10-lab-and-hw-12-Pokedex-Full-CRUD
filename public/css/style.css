@@ -1,0 +1,16 @@
+* {
+	border: 1px solid black;
+}
+#show-container {
+	display: flex;
+	margin: 0 auto;
+	width: 800px;
+	height: 600px;
+	justify-content: space-between;
+}
+#detail-container {
+	width: 90%;
+	height: 35%;
+	display: flex;
+	justify-content: space-between;
+}

@@ -3,16 +3,27 @@ const express    = require('express');
 const app        = express();
 const Pokemon    = require('./models/pokemon.js');
 
+const bodyParser = require('body-parser');
 
+let methodOverride = require('method-override');
+
+app.use(bodyParser.urlencoded({
+	extended: false
+}));
+
+app.use(methodOverride('_method'))
+
+app.use(express.static('public'))
 
 // INDEX
 app.get('/', (req, res) => {
 	res.render('index.ejs', { data: Pokemon });
-	// res.send('this shit works tho');
+	// res.send(Pokemon);
 });
 
 // SHOW
 app.get('/:id', (req, res) => {
+	console.log('hit it');
     res.render('show.ejs', { data: Pokemon[req.params.id] });
 });
 
