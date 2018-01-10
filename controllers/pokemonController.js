@@ -15,6 +15,12 @@ router.get("/", (req, res) => {
 });
 
 
+// character route
+router.get("/:index", (req, res) => {
+	res.send(pokemon[req.params.index])
+	console.log("Hit the char route")
+})
+
 
 
 module.exports = router
