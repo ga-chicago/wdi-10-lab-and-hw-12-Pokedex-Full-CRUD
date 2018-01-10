@@ -12,10 +12,11 @@
 			<li>
 				<a href="/pokemon/<%=[i]%>"><%= data[i].name %></a>
 				<a href="/pokemon/<%=[i]%>/edit">(edit)</a>
-				<form action='/pokemon/<%= i %>/?_method=DELETE' method = 'POST'>
+				<form action='/pokemon/<%= i %>/?_method=DELETE' method='POST'>
 					<button type='submit'>Delete</button>
 
 				</form>
+			
 
 			</li>
 		<% } %>

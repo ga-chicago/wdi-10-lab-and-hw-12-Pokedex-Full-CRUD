@@ -2,15 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title><%= pokemon.name %> page!</title>
+	<title><%= data.name %> page!</title>
 </head>
 <body>
 
-	<a href="/pokemon"> &lt; back to all fruits </a>
+	<a href="/pokemon"> &lt; back to all pokemon </a>
 
-	<h1>Edit <%=pokemon.name %></h1>
+	<h1>Edit <%=data.name %></h1>
 
-	<form action="/pokeon/<%= index %>?_method=PUT" method="POST">
+	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
 
 		NAME: <input type="text" name="name" value="<%=data.name; %>"/>
 		<br />
