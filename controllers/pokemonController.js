@@ -12,6 +12,12 @@ router.get('/', (req, res) => {
 	});
 });
 
+// NEW
+router.get('/new', (req, res) => {
+	console.log('hit the new route')
+	res.render('new.ejs')
+})
+
 // SHOW
 router.get('/:id', (req, res) => {
     console.log('hit the show route for this pokemon')
