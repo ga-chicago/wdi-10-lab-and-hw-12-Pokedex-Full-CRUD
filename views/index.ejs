@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pokemon Index Page</title>
+</head>
+<body>
+	<h1>Pokemon Inventory</h1>
+
+	<ul>
+		<% for(let i = 0; i < pokemon.length; i++) {%>
+			<li><%= pokemon[i].name%></li>
+			<img src=<%= pokemon[i].img%>>
+
+
+		<% } %>
+	</ul>
+
+
+
+</body>
+</html>

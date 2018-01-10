@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/anthonyjlower/wdi-10-lab-and-hw-12-Pokedex-Full-CRUD#readme",
   "dependencies": {
+    "ejs": "^2.5.7",
     "express": "^4.16.2",
     "gulp": "^3.9.1",
-    "gulp-less": "^3.4.0",
-    "njm": "^0.1.13"
+    "gulp-less": "^3.4.0"
   }
 }

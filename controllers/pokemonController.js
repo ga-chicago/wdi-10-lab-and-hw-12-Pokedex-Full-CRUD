@@ -6,8 +6,12 @@ const pokemon = require("../models/pokemon.js");
 
 // Index Route
 router.get("/", (req, res) => {
-	res.send("Check the terminal");
-	console.log("Hit the index route");
+	// res.send(pokemon);
+	// console.log("Hit the index route");
+
+	res.render("index.ejs", {
+		pokemon: pokemon
+	})
 });
 
 
