@@ -9,14 +9,14 @@
 
 	<h1>Create A New Pokemon</h1>
 
-	<form action="/pokemon" method=POST>
-		NAME: <input type="text" name="name"><br>
-		IMG URL: <input type="text" name="img"><br>
-		TYPE: <input type="text" name="types"><br>
-		HP: <input type="text" name="hp"><br>
-		ATTACK: <input type="text" name="attack"><br>
-		DEFENSE: <input type="text" name="defense"><br>
-		<input type="submit" name="" value="Create Pokemon">
+	<form action="/pokemon/<%=index%>?_method=PUT" method=POST>
+		NAME: <input type="text" name="name" value=<%= pokemon.name %>><br>
+		IMG URL: <input type="text" name="img" value=<%= pokemon.img %>><br>
+		TYPE: <input type="text" name="types" value=<%= pokemon.type %>><br>
+		HP: <input type="text" name="hp" value=<%= pokemon.stats.hp %>><br>
+		ATTACK: <input type="text" name="attack" value=<%= pokemon.stats.attack %>><br>
+		DEFENSE: <input type="text" name="defense" value=<%= pokemon.stats.attack %>><br>
+		<input type="submit" name="" value="Edit Pokemon">
 
 	</form>
 

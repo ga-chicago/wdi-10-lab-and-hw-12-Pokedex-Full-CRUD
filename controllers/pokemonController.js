@@ -49,15 +49,44 @@ router.get("/:index", (req, res) => {
 	// console.log("Hit the char route")
 
 	res.render("show.ejs", {
-		pokemon: pokemon[req.params.index]
+		pokemon: pokemon[req.params.index],
+		index: req.params.index
 	})
 })
 
 
 // Edit Route
 router.get("/:index/edit", (req, res) => {
-	res.send("Edit Page")
-	console.log("Hit edit route")
+	// res.send("Edit Page")
+	// console.log("Hit edit route")
+
+	res.render("edit.ejs", {
+		pokemon: pokemon[req.params.index],
+		index: req.params.index
+	})
+})
+
+router.put("/:index", (req, res) => {
+	
+	const newPoke = {
+		name: req.body.name,
+		img: req.body.img,
+		type: [
+			req.body.types,
+		],
+		stats: {
+			hp: req.body.hp,
+			attack: req.body.attack,
+			defense: req.body.attack
+		}
+	}
+
+	pokemon[req.params.index] = newPoke
+	
+
+	res.render("show.ejs",{
+		pokemon: pokemon[req.params.index]
+	})
 })
 
 

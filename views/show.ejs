@@ -6,6 +6,10 @@
 	<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded" rel="stylesheet">
 </head>
 <body>
+	<form action="./<%= index%>/edit" method="GET">
+		<button>Edit <%= pokemon.name %></button>
+	</form>
+
 	<h1><%= pokemon.name %></h1>
 
 	<img src=<%= pokemon.img %>>
