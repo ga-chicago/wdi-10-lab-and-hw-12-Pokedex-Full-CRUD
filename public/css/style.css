@@ -1,5 +1,12 @@
-* {
+/** {
 	border: 1px solid black;
+}*/
+body {
+	background-color: black;
+	font-family: 'Fjalla One', sans-serif;
+}
+.bigwrap {
+	background-color: #FE5D26;
 }
 #delete-form {
 	display: inline;
@@ -7,6 +14,7 @@
 #list-container {
 	height: 700px;
 	overflow-y: scroll;
+	background-color: #FAEDCA;
 }
 #picture-render {
 	/*width: 225px;*/
@@ -19,6 +27,7 @@
 	height: 600px;
 	justify-content: space-between;
 	flex-direction: column;
+	background-color: #FE5D26;
 }
 #detail-container {
 	width: 90%;
@@ -33,14 +42,17 @@
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
+	font-size: 28px;
 }
 #description-container {
+	background-color: #FAEDCA;
 	width: 90%;
 	height: 35%;
 	margin: 0 auto;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	text-align: center;
 }
 #edit-container {
 	width: 90%;
@@ -51,4 +63,8 @@
 .stat-container {
 	width: 30%;
 	height: 40%;
+	background-color: #F2C078;
+}
+.info-block {
+	background-color: #FAEDCA;
 }

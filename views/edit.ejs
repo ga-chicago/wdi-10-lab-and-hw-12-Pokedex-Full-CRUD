@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form action="/" method="POST">
+<form action="/<%= index %>?_method=PUT" method="POST">
 	<div id="show-container">
 
 		<div id="detail-container">
@@ -53,7 +53,8 @@
 		</div>
 
 		<div id="edit-container">
-			<input type="submit" name="click" value="edit pokemon!" /> | <a href="/">return</a>
+			<input type="submit" name="click" value="edit pokemon!" />
+			 | <a href="/">return</a>
 
 		</div>
 	</div>

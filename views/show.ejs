@@ -13,13 +13,14 @@
 
 		<div id="image-container">
 			<img id="picture-render" src="<%= data.img %>">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		</div>
 
 		<div id="info-container">
 
-			<div id="name-and-number"> Name: <%= data.name %> | No: <%= data.id %></div>
+			<div class="info-block" id="name-and-number"> #<%= data.id %> -- <%= data.name %> </div>
 
-			<div id="types"> 
+			<div class="info-block" id="types"> 
 				Type<% if (data.type.length > 1) { %>s<% } %>:
 
 				<% for (let i = 0; i < data.type.length; i++) { %>
@@ -28,7 +29,7 @@
 				}%>
 			</div>
 
-			<div id="height-and-weight">
+			<div class="info-block" id="height-and-weight">
 				Height: <%= data.misc.height %> | Weight: <%= data.misc.weight %>
 			</div>
 
@@ -53,7 +54,7 @@
 	</div>
 
 	<div id="edit-container">
-		edit | 
+		<a href="/<%= index %>/edit">edit</a> | 
 		<form id="delete-form" action="/<%= index %>?_method=DELETE" method="POST">
 			<input type="hidden" name="_method" value="DELETE">
 			<input type="submit" value="delete">

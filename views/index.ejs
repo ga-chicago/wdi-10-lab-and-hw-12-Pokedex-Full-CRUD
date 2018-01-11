@@ -4,18 +4,21 @@
 	<meta charset="utf-8">
 	<title>Poke-Index ;)</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 </head>
 <body>
-<h2>All Pokemon</h2>
 
-<a href="/new">Add Pokemon</a> </br> </br>
+<div class="bigwrap">
+	<h2>All Pokemon</h2>
 
-<div id="list-container">
-	<% for (let i = 0; i < data.length; i++) { %>
-		<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> </br>
-	<% } %>
+	<a href="/new">Add Pokemon</a> </br> </br>
+
+	<div id="list-container">
+		<% for (let i = 0; i < data.length; i++) { %>
+			<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> </br>
+		<% } %>
+	</div>
 </div>
-
 
 </body>
 </html>
