@@ -15,7 +15,7 @@ router.route('/new') // Create a new pokemon in the pokedex
 
 router.route('/:index') // Show the chosen pokemon 
 	.get((request,response)=>{
-		response.render('show.ejs',{pokemon: pokeBase[request.params.index]});
+		response.render('show.ejs',{pokemon: pokeBase[request.params.index],index: request.params.index,});
 	})
 	.delete((request,response)=>{
 		pokeBase.splice(request.params.index,1);

@@ -1,23 +1,12 @@
 <html>
 <head>
-	<title></title>
+	<title>Pokedex</title>
 </head>
 <body>
 	<% for (let i = 0; i < pokemon.length; i++) { %>
+		<a href="/pokemon/<%= i %>">
 		<h1> <%= pokemon[i].name %> </h1> 
 		<img src="<%= pokemon[i].img %>">
-		<ul> <!-- Pokemons' types -->
-			<h4>TYPE</h4>
-			<% for (let x = 0; x < pokemon[i].type.length; x++) { %>
-				<li><%= pokemon[i].type[x] %></li>
-			<% } %>
-		</ul>
-		<ul> <!-- Pokemons' Stats -->
-			<h4>STATS</h4>
-			<% for (keys in pokemon[i].stats) { %>
-				<li><%= keys %> = <%= pokemon[i].stats[keys] %></li>
-			<% } %>
-		</ul>
 	<% } %>
 </body>
 </html>

@@ -1,8 +1,26 @@
 <html>
 <head>
-	<title></title>
+	<title>Pokedex</title>
 </head>
 <body>
-	working working working
+		<h1> <%= pokemon.name %> </h1> 
+		<form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+			<button type="submit">Delete</button>
+		</form>
+		<img src="<%= pokemon.img %>">
+		<ul> <!-- Pokemons' Types -->
+			<h4>TYPE</h4>
+			<% for (let x = 0; x < pokemon.type.length; x++) { %>
+				<li><%= pokemon.type[x] %></li>
+			<% } %>
+		</ul>
+		<ul> <!-- Pokemons' Stats -->
+			<h4>STATS</h4>
+			<% for (keys in pokemon.stats) { %>
+				<li><%= keys %> = <%= pokemon.stats[keys] %></li>
+			<% } %>
+		</ul>
+		<a href="/pokemon/<%= index %>/edit">edit</a>
+		</a>
 </body>
 </html>
