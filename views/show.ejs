@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>View Pokemon</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 </head>
 <body>
 
@@ -13,7 +14,6 @@
 
 		<div id="image-container">
 			<img id="picture-render" src="<%= data.img %>">
-	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
 		</div>
 
 		<div id="info-container">
@@ -39,17 +39,17 @@
 
 	<div id="description-container">
 		
-		<div class="stat-container" id="hp">HP: <%= data.stats.hp %></div>
+		<div class="stat-container" id="hp"><p class="formattingzzz">HP: <%= data.stats.hp %></p></div>
 
-		<div class="stat-container" id="attack">Attack: <%= data.stats.attack %></div>
+		<div class="stat-container" id="attack"><p class="formattingzzz">Attack: <%= data.stats.attack %></p></div>
 
-		<div class="stat-container" id="defense">Defense: <%= data.stats.defense %></div>
+		<div class="stat-container" id="defense"><p class="formattingzzz">Defense: <%= data.stats.defense %></p></div>
 
-		<div class="stat-container" id="spattack">SP Attack: <%= data.stats.spattack %></div>
+		<div class="stat-container" id="spattack"><p class="formattingzzz">SP Attack: <%= data.stats.spattack %></p></div>
 
-		<div class="stat-container" id="spdefense">SP Defense: <%= data.stats.spdefense %></div>
+		<div class="stat-container" id="spdefense"><p class="formattingzzz">SP Defense: <%= data.stats.spdefense %></p></div>
 
-		<div class="stat-container" id="speed">Speed: <%= data.stats.speed %></div>
+		<div class="stat-container" id="speed"><p class="formattingzzz">Speed: <%= data.stats.speed %></p></div>
 
 	</div>
 

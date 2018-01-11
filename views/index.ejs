@@ -9,13 +9,14 @@
 <body>
 
 <div class="bigwrap">
-	<h2>All Pokemon</h2>
+	<h1>Pokedex Index</h1>
 
 	<a href="/new">Add Pokemon</a> </br> </br>
 
 	<div id="list-container">
 		<% for (let i = 0; i < data.length; i++) { %>
-			<a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %> </a> </br>
+			<div class="list-display"> <a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %>  </br>
+			<img id="index-pic" src="<%= data[i].img %>"> </a> </div> </br> </br>
 		<% } %>
 	</div>
 </div>

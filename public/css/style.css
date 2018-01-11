@@ -8,6 +8,14 @@ body {
 .bigwrap {
 	background-color: #FE5D26;
 }
+#image-container {
+	height: 215px;
+	width: 250px;
+	overflow-x: scroll;
+}
+#index-pic {
+	height: 80%;
+}
 #delete-form {
 	display: inline;
 }
@@ -15,6 +23,13 @@ body {
 	height: 700px;
 	overflow-y: scroll;
 	background-color: #FAEDCA;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.list-display {
+	height: 200px;
+	margin: 10px;
 }
 #picture-render {
 	/*width: 225px;*/
@@ -24,14 +39,14 @@ body {
 	display: flex;
 	margin: 0 auto;
 	width: 800px;
-	height: 600px;
-	justify-content: space-between;
+	height: 500px;
+	justify-content: space-around;
 	flex-direction: column;
 	background-color: #FE5D26;
 }
 #detail-container {
 	width: 90%;
-	height: 35%;
+	height: 212px;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
@@ -53,10 +68,11 @@ body {
 	flex-wrap: wrap;
 	justify-content: space-around;
 	text-align: center;
+	padding-top: 20px;
 }
 #edit-container {
 	width: 90%;
-	height: 20%;
+	height: 5%;
 	margin: 0 auto;
 	text-align: center;
 }
@@ -67,4 +83,8 @@ body {
 }
 .info-block {
 	background-color: #FAEDCA;
+}
+.formattingzzz {
+	padding-top: 0;
+	font-size: 24px;
 }
