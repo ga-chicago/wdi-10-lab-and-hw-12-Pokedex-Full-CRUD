@@ -5,9 +5,9 @@ const express    = require('express'),
 	  methodOverride = require('method-override'); /// for delete and possibly put (edit)
 
 
-// always you to read req.body
+// always read req.body
 app.use(bodyParser.urlencoded({
-  extended: false
+  extended: true
 }));
 
 /////////////// FOR DELETE ///////////////
@@ -16,9 +16,7 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'));
 
 const pokeControler = require('./controllers/pokeController.js')// get the controller functions and require them
-app.use('/pokemon/', pokeControler);//all paths will start with /fruits/
-
-
+app.use('/pokemon/', pokeControler);//all paths will start with /pokemon/
 
 
 
