@@ -4,6 +4,7 @@ body {
   color: white;
   font-family: 'Encode Sans Expanded', sans-serif;
   text-align: center;
+  margin: 0 auto;
 }
 img {
   height: 150px;

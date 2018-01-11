@@ -54,5 +54,16 @@ router.get("/:index", (req, res) => {
 })
 
 
+router.delete("/:index", (req, res) => {
+	// res.send("Check terminal -- Delete Route")
+	console.log("Hit delete route")
+
+	pokemon.splice(req.params.index, 1);
+	res.redirect("/pokemon/");
+})
+
+
+
+
 
 module.exports = router

@@ -2,13 +2,17 @@ const express = require("express");
 const app = express();
 const port = 3000
 const bodyParser = require("body-parser")
+const methodOverride = require("method-override")
 
 
-app.use(express.static("public"))
+app.use(express.static("public"));
+
+app.use(methodOverride("_method"));
+
 
 app.use(bodyParser.urlencoded({
 	extended: false
-}))
+}));
 
 
 
