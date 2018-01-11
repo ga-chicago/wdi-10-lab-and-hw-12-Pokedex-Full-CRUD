@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Pokedex</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<a href="/pokemon"> Return to the pokedex </a> </br>
+		<h1> <%= pokemon.name %> </h1> 
+		<form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
+			<button type="submit">Delete</button>
+		</form>
+		<img src="<%= pokemon.img %>">
+		<ul> <!-- Pokemons' Types -->
+			<h4>TYPE</h4>
+			<% for (let x = 0; x < pokemon.type.length; x++) { %>
+				<li><%= pokemon.type[x] %></li>
+			<% } %>
+		</ul>
+		<ul> <!-- Pokemons' Stats -->
+			<h4>STATS</h4>
+			<% for (keys in pokemon.stats) { %>
+				<% if (keys == 'hp' || keys == 'attack' || keys == 'defense') { %>
+					<li><%= keys %> = <%= pokemon.stats[keys] %></li>
+				<% } %>
+			<% } %>
+		</ul>
+		
+		<a href="/pokemon/<%= index %>/edit">edit</a>
+</body>
+</html>

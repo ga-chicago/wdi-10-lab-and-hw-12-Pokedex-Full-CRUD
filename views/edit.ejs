@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<a href="/pokemon"> Return to the pokedex </a> </br>
+	
+	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+		NAME: <input type="text" name="name" value="<%=pokemon.name; %>"/><br />
+		IMAGE URL: <input type="text" name="img" value="<%=pokemon.img; %>" /><br />
+		TYPE: <input type="text" name="type" value="<%=pokemon.type; %>"/>( , between types)<br />
+		HP: <input type="text" name="hp" value="<%=pokemon.stats.hp; %>" /><br />
+		ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack;%>"/><br />
+		DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense;%>" />
+		<br />
+		<input type="submit" name="" value="Update pokemon" />
+	<form> 
+</body>
+</html>
