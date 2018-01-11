@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>See All the Pokemon</title>
+</head>
+<body>
+	<h1>See All the Pokemon</h1>
+
+<ul class = pokeList>
+	
+		<% for (i = 0; i < 50; i++){ %>
+			<li>
+				<a href="/pokemon/<%=[i]%>"><%= data[i].name %></a>
+				<a href="/pokemon/<%=[i]%>/edit">(edit)</a>
+				<form action='/pokemon/<%= i %>/?_method=DELETE' method='POST'>
+					<button type='submit'>Delete</button>
+
+				</form>
+
+
+			</li>
+		<% } %>
+	</ul>
+
+
+	<a href="/pokemon/new">Add a new pokemon </a>
+
+</body>
+</html>

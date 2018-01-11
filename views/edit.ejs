@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title><%=data.name %> page!</title>
+</head>
+<body>
+
+
+	<h1>Edit <%=data.name %></h1>
+
+	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+
+		NAME: <input type="text" name="name" value="<%=data.name; %>"/>
+		<br />
+		<br />
+		<input type="submit" name="" value="Update Pokemon" />
+
+	<form>
+	<br />
+	<a href="/pokemon"> &lt; back to all pokemon </a>
+
+</body>
+</html>
