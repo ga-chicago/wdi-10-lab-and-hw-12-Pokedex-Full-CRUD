@@ -83,9 +83,9 @@ router.put("/:index", (req, res) => {
 
 	pokemon[req.params.index] = newPoke
 	
-
 	res.render("show.ejs",{
-		pokemon: pokemon[req.params.index]
+		pokemon: pokemon[req.params.index],
+		index: req.params.index
 	})
 })
 
