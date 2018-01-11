@@ -5,17 +5,15 @@
 <body>
 	<a href="/pokemon"> Return to the pokedex </a> </br>
 	
-<!-- 	<form action="/fruits/<%= index %>?_method=PUT" method="POST">
-
-		NAME: <input type="text" name="name" value="<%=fruit.name; %>"/><br />
-		Color: <input type="text" name="color" value="<%=fruit.color; %>" /><br />
-		Ready to Eat? <input type="checkbox" name="readyToEat"
-		<% if(fruit.readyToEat == true) { %>
-			checked
-		<% } %>
-		/><br />
-		<input type="submit" name="" value="Update Fruit" />
-
-	<form> -->
+	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+		NAME: <input type="text" name="name" value="<%=pokemon.name; %>"/><br />
+		IMAGE URL: <input type="text" name="img" value="<%=pokemon.img; %>" /><br />
+		TYPE: <input type="text" name="type" value="<%=pokemon.type; %>"/>( , between types)<br />
+		HP: <input type="text" name="hp" value="<%=pokemon.stats.hp; %>" /><br />
+		ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack;%>"/><br />
+		DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense;%>" />
+		<br />
+		<input type="submit" name="" value="Update pokemon" />
+	<form> 
 </body>
 </html>

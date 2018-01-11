@@ -17,6 +17,16 @@ router.route('/:index') // Show the chosen pokemon
 	.get((request,response)=>{
 		response.render('show.ejs',{pokemon: pokeBase[request.params.index],index: request.params.index,});
 	})
+	.put((request,response)=>{
+		let types = request.body.type.split(',')
+		pokeBase[request.params.index].type = types;
+		pokeBase[request.params.index].name = request.body.name;
+		pokeBase[request.params.index].img = request.body.img;
+		pokeBase[request.params.index].stats.hp = request.body.hp;
+		pokeBase[request.params.index].stats.attack = request.body.attack;
+		pokeBase[request.params.index].stats.defense = request.body.defense;
+		response.redirect('/pokemon');
+	})
 	.delete((request,response)=>{
 		pokeBase.splice(request.params.index,1);
 		response.redirect('/pokemon/');

@@ -17,10 +17,12 @@
 		<ul> <!-- Pokemons' Stats -->
 			<h4>STATS</h4>
 			<% for (keys in pokemon.stats) { %>
-				<li><%= keys %> = <%= pokemon.stats[keys] %></li>
+				<% if (keys == 'hp' || keys == 'attack' || keys == 'defense') { %>
+					<li><%= keys %> = <%= pokemon.stats[keys] %></li>
+				<% } %>
 			<% } %>
 		</ul>
+		
 		<a href="/pokemon/<%= index %>/edit">edit</a>
-		</a>
 </body>
 </html>
