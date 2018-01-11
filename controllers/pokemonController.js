@@ -54,6 +54,13 @@ router.get("/:index", (req, res) => {
 })
 
 
+// Edit Route
+router.get("/:index/edit", (req, res) => {
+	res.send("Edit Page")
+	console.log("Hit edit route")
+})
+
+
 router.delete("/:index", (req, res) => {
 	// res.send("Check terminal -- Delete Route")
 	console.log("Hit delete route")
