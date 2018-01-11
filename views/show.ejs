@@ -1,8 +1,10 @@
 <html>
 <head>
 	<title>Pokedex</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+	<a href="/pokemon"> Return to the pokedex </a> </br>
 		<h1> <%= pokemon.name %> </h1> 
 		<form action="/pokemon/<%= index %>?_method=DELETE" method="POST">
 			<button type="submit">Delete</button>

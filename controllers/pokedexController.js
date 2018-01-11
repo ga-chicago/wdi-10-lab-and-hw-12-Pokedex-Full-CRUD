@@ -10,6 +10,13 @@ router.route('/') //  Create the pokedex landing page
 router.route('/new') // Create a new pokemon in the pokedex
 	.get((request,response)=>{
 		response.render('new.ejs');
+	})
+	.put((request,response)=>{
+		let types = request.body.type.split(',')
+		let stats = {hp: request.body.hp, attack: request.body.attack, defense: request.body.defense}
+		request.body.type = types;
+		request.body.stats = stats;
+		pokeBase.push(request.body);
 		response.redirect('/pokemon/');
 	})
 
