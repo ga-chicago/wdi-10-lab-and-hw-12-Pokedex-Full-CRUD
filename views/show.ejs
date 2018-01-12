@@ -2,31 +2,38 @@
 <html>
 <head>
 	<title><%=pokemon.name; %></title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-	<a href="/pokemon"> &lt; Go back to the 151!</a>
+	<div class="browse-box">
+		<a href="/pokemon"> &lt; Go back to the 151!</a>
+	</div>
 	<h1><%=pokemon.name; %></h1>
-	<img src="<%=pokemon.img; %>">
-	<br>
-	TYPE(S):
-	<br>
-	<ul>
-		<% for (let i = 0; i < pokemon.type.length; i++) { %>
-		<li><%=pokemon.type[i]; %></li> 
-		<% } %>
-	</ul>
-	<br>
-	HP:
-	<%=pokemon.stats.hp; %>
-	<br>
-	ATTACK:
-	<%=pokemon.stats.attack; %>
-	<br>
-	DEFENSE:
-	<%=pokemon.stats.defense; %>
-	<br>
-	SPEED:
-	<%=pokemon.stats.speed; %>
+	<div class="show-container">
+	<img id="show-img" src="<%=pokemon.img; %>">
+	<div class="poke-stats">
+			TYPE(S):
+			<br>
+			<ul>
+				<% for (let i = 0; i < pokemon.type.length; i++) { %>
+					<li id="show-type"><%=pokemon.type[i]; %></li> 
+				<% } %>
+			</ul>
+			<br>
+			HP:
+			<%=pokemon.stats.hp; %>
+			<br>
+			ATTACK:
+			<%=pokemon.stats.attack; %>
+			<br>
+			DEFENSE:
+			<%=pokemon.stats.defense; %>
+			<br>
+			SPEED:
+			<%=pokemon.stats.speed; %>
+		</div>
+	</div>
 	
 </body>
 </html>

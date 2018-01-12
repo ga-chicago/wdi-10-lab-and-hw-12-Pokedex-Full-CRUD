@@ -2,30 +2,35 @@
 <html>
 <head>
 	<title>Edit Pokemon</title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<a href="/pokemon"> &lt; Go back to the 151!</a>
 	<h1>Edit <%=pokemon.name; %></h1>
-	<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
-
-		NAME: <input type="text" name="name" value="<%=pokemon.name; %>">
-		<br>
+	<div class="edit-container">
+		<div class="edit-poke-stats">
+			<form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+				NAME: <input type="text" name="name" value="<%=pokemon.name; %>">
+				<br>
+				CHANGE IMAGE: <input type="text" name="img" value="<%=pokemon.img %>">
+				<br>
+				TYPE: <input type="text" name="type" value="<%=pokemon.type; %>">
+				<br>
+				HP: <input type="text" name="hp" value="<%=pokemon.stats.hp %>">
+				<br>
+				ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack%>">
+				<br>
+				DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense %>">
+				<br>
+				SPEED: <input type="text" name="speed" value="<%=pokemon.stats.speed%>">
+				<br>
+				<br>
+				<input type="submit" name="" value="Update Pokemon" class="button-style">
+			</form>
+		</div>
 		<img src="<%=pokemon.img %>">
-		<br>
-		CHANGE IMAGE: <input type="text" name="img" value="<%=pokemon.img %>">
-		<br>
-		TYPE: <input type="text" name="type" value="<%=pokemon.type; %>">
-		<br>
-		HP: <input type="text" name="hp" value="<%=pokemon.stats.hp %>">
-		<br>
-		ATTACK: <input type="text" name="attack" value="<%=pokemon.stats.attack%>">
-		<br>
-		DEFENSE: <input type="text" name="defense" value="<%=pokemon.stats.defense %>">
-		<br>
-		SPEED: <input type="text" name="speed" value="<%=pokemon.stats.speed%>">
-		<br>
-		<input type="submit" name="" value="Update Pokemon">
-	</form>
+	</div>
 
 </body>
 </html>

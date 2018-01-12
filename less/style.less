@@ -1,0 +1,134 @@
+// VARIABLES
+@pokeBlue: #3c5aa6;
+@pokeLightBlue: #2a75bb;
+@pokeYellow: #ffcb05;
+@pokeDarkYellow: #c7a008;
+@fontFamilyBody: 'Lato', sans-serif;
+@fontFamilyHeader: 'Bangers', sans-serif;
+@border: 1px solid black;
+
+// UNIVERSAL
+body {
+	background-color: @pokeYellow;
+	font-family: @fontFamilyBody;
+}
+
+h1 {
+	font-family: @fontFamilyHeader;
+	font-size: 50px;
+	text-align: center;
+}
+
+a {
+	color: white;
+	font-weight: bold;
+  	text-decoration: none;
+}
+
+// this one is for the 'go back' links & others w/a tags
+.browse-box {
+	background-color: @pokeBlue;
+	border: @border;
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button-style {
+	background-color: @pokeBlue;
+	color: white;
+	padding: 2px 0;
+	border: @border;
+}
+
+
+// NEW PAGE
+.new-container {
+	text-align: right;
+	width: 225px;
+	margin: 30px auto;
+}
+
+
+// EDIT PAGE
+.edit-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto;
+	width: 550px;
+}
+
+.edit-poke-stats {
+	margin-right: 10px;
+	text-align: right;
+}
+
+
+// SHOW PAGE
+.show-container {
+	display: flex;
+	// flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0 auto;
+	width: 500px;
+}
+
+#show-img {
+	border: 5px solid black;
+}
+
+.poke-stats {
+	background-color: white;
+	border: 5px solid black;
+	margin: 5px;
+	padding: 5px;
+	width: 100px;
+}
+
+#show-type {
+	background-color: transparent;
+	border: none;
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+
+// INDEX PAGE
+#poke-box {
+	margin: 0 auto;
+}
+
+ul {
+	display: inline-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	margin: 0;
+	font-weight: bold;
+	list-style: none;
+	padding: 0;
+}
+
+li {
+	border: @border;
+	background-color: white;
+	margin: 5px;
+	width: 350px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#delete {
+	background-color: #ff0000;
+	color: white;
+	border: @border;
+}

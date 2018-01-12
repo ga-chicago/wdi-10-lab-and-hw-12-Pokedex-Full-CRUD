@@ -2,24 +2,34 @@
 <html>
 <head>
 	<title>Pokemon Home Page</title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<h1>Gotta catch 'em all!</h1>
-	<a href="/pokemon/new">Create your own Pokemon!</a>
+	<div>
+		<a href="/pokemon/new" class="browse-box">Create your own Pokemon!</a>
+	</div>
 	<br>
-	<ul>
-		<% for (let i = 0; i < pokemon.length; i++) {%>
-			<li><%=pokemon[i].name; %>
+	<div id="poke-box">
+		<ul id="index-ul">
+			<% for (let i = 0; i < pokemon.length; i++) {%>
+				<li id="index-li"><%=pokemon[i].name; %>
+					<br>
+					<br>
+					<a href="/pokemon/<%= i %>"><img src="<%=pokemon[i].img; %>"></a>
+					<br>
+					<br>
+					<a href="/pokemon/<%=i %>/edit" class="button-style">Edit Pokemon</a>
+					<br>
+					<br>
+					<form action="/pokemon/<%= i %>/?_method=DELETE" method="POST">
+						<button type="submit" id="delete">Delete Pokemon</button>
+					</form>
+				</li>
 				<br>
-				<a href="/pokemon/<%= i %>"><img src="<%=pokemon[i].img; %>"></a>
-				<br>
-				<a href="/pokemon/<%=i %>/edit">(Edit Pokemon)</a>
-				<form action="/pokemon/<%= i %>/?_method=DELETE" method="POST">
-					<button type="submit">Delete Pokemon</button>
-				</form>
-			</li>
-			<br>
-		<% } %>
-	</ul>
+			<% } %>
+		</ul>
+	</div>
 </body>
 </html>

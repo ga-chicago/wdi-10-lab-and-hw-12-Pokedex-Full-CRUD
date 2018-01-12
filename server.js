@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 // hook up method override 
 app.use(methodOverride('_method'));
 // hook up static (so can have css)
-app.use(express.static('public'));
+app.use(express.static('./public'));
 // require the controller for the pokemon and place it at the root route of pokemon
 const pokemonController = require('./controllers/pokemonController')
 app.use('/pokemon/', pokemonController)
@@ -19,7 +19,7 @@ app.use('/pokemon/', pokemonController)
 // HOMEPAGE
 // Redirecting to Pokemon homepage
 app.get('/', (req, res) => {
-	res.redirect('/pokemon')
+	res.render('home.ejs')
 })
 
 

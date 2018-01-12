@@ -2,31 +2,34 @@
 <html>
 <head>
 	<title>Add Pokemon</title>
+	<link href="https://fonts.googleapis.com/css?family=Bangers|Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
 	<h1>Create your own Pokemon!</h1>
+	<div class="new-container">
+		<form action="/pokemon" method="POST">
+			NAME: <input type="text" name="name">
+			<br>
+			IMAGE: <input type="text" name="img">
+			<br>
+			TYPE: <input type="text" name="type">
+			<br>
+			HP: <input type="text" name="hp">
+			<br>
+			ATTACK: <input type="text" name="attack">
+			<br>
+			DEFENSE: <input type="text" name="defense">
+			<br>
+			SPEED: <input type="text" name="speed">
+			<br>
+			<input type="submit" name="Create Pokemon" class="button-style">
+		</form>
+	</div>
 
-	<form action="/pokemon" method="POST">
-
-		NAME: <input type="text" name="name">
-		<br>
-		IMAGE: <input type="text" name="img">
-		<br>
-		TYPE: <input type="text" name="type">
-		<br>
-		HP: <input type="text" name="hp">
-		<br>
-		ATTACK: <input type="text" name="attack">
-		<br>
-		DEFENSE: <input type="text" name="defense">
-		<br>
-		SPEED: <input type="text" name="speed">
-		<br>
-		<input type="submit" name="Create Pokemon">
-
-	</form>
-
-	<a href="/pokemon"> &lt; Go back to the 151!</a>
+	<div class="browse-box">
+		<a href="/pokemon"> &lt; Go back to the 151!</a>
+	</div>
 
 </body>
 </html>
