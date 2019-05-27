@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>View Pokemon</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+<body>
+
+<div id="show-container">
+
+	<div id="detail-container">
+
+		<div id="image-container">
+			<img id="picture-render" src="<%= data.img %>">
+		</div>
+
+		<div id="info-container">
+
+			<div class="info-block" id="name-and-number"> #<%= data.id %> -- <%= data.name %> </div>
+
+			<div class="info-block" id="types"> 
+				Type<% if (data.type.length > 1) { %>s<% } %>:
+
+				<% for (let i = 0; i < data.type.length; i++) { %>
+					<%= data.type[i] %><% if (i != data.type.length - 1) { %>, <% } else { %>.
+					<% } 
+				}%>
+			</div>
+
+			<div class="info-block" id="height-and-weight">
+				Height: <%= data.misc.height %> | Weight: <%= data.misc.weight %>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="description-container">
+		
+		<div class="stat-container" id="hp"><p class="formattingzzz">HP: <%= data.stats.hp %></p></div>
+
+		<div class="stat-container" id="attack"><p class="formattingzzz">Attack: <%= data.stats.attack %></p></div>
+
+		<div class="stat-container" id="defense"><p class="formattingzzz">Defense: <%= data.stats.defense %></p></div>
+
+		<div class="stat-container" id="spattack"><p class="formattingzzz">SP Attack: <%= data.stats.spattack %></p></div>
+
+		<div class="stat-container" id="spdefense"><p class="formattingzzz">SP Defense: <%= data.stats.spdefense %></p></div>
+
+		<div class="stat-container" id="speed"><p class="formattingzzz">Speed: <%= data.stats.speed %></p></div>
+
+	</div>
+
+	<div id="edit-container">
+		<a href="/<%= index %>/edit">edit</a> | 
+		<form id="delete-form" action="/<%= index %>?_method=DELETE" method="POST">
+			<input type="hidden" name="_method" value="DELETE">
+			<input type="submit" value="delete">
+		</form>  | <a href="/">return</a>
+
+	</div>
+</div>
+
+</body>
+</html>

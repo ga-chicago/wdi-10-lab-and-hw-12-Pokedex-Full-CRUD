@@ -1,0 +1,90 @@
+/** {
+	border: 1px solid black;
+}*/
+body {
+	background-color: black;
+	font-family: 'Fjalla One', sans-serif;
+}
+.bigwrap {
+	background-color: #FE5D26;
+}
+#image-container {
+	height: 215px;
+	width: 250px;
+	overflow-x: scroll;
+}
+#index-pic {
+	height: 80%;
+}
+#delete-form {
+	display: inline;
+}
+#list-container {
+	height: 700px;
+	overflow-y: scroll;
+	background-color: #FAEDCA;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.list-display {
+	height: 200px;
+	margin: 10px;
+}
+#picture-render {
+	/*width: 225px;*/
+	height: 210px;
+}
+#show-container {
+	display: flex;
+	margin: 0 auto;
+	width: 800px;
+	height: 500px;
+	justify-content: space-around;
+	flex-direction: column;
+	background-color: #FE5D26;
+}
+#detail-container {
+	width: 90%;
+	height: 212px;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+}
+#info-container {
+	width: 65%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	font-size: 28px;
+}
+#description-container {
+	background-color: #FAEDCA;
+	width: 90%;
+	height: 35%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	padding-top: 20px;
+}
+#edit-container {
+	width: 90%;
+	height: 5%;
+	margin: 0 auto;
+	text-align: center;
+}
+.stat-container {
+	width: 30%;
+	height: 40%;
+	background-color: #F2C078;
+}
+.info-block {
+	background-color: #FAEDCA;
+}
+.formattingzzz {
+	padding-top: 0;
+	font-size: 24px;
+}

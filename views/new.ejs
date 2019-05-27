@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Add Pokemon</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+
+<form action="/" method="POST">
+	<div id="show-container">
+
+		<div id="detail-container">
+
+			<div id="image-container">
+				Poke-pic URL: <input type="text" name="img">
+			</div>
+
+			<div id="info-container">
+
+				<div id="name-and-number">
+					Name: <input type="text" name="name"> No: <input type="text" name="id">
+				</div>
+
+				<div id="types">
+					Type 1:<input type="text" name="typeOne">
+					Type 2:<input type="text" name="typeTwo">
+				</div>
+
+				<div id="height-and-weight">
+					Height:<input type="text" name="height">
+					Weight:<input type="text" name="weight">
+				</div>
+
+			</div>
+
+		</div>
+
+		<div id="description-container">
+			
+			<div class="stat-container" id="hp">HP:<input type="text" name="hp"></div>
+
+			<div class="stat-container" id="attack">Attack:<input type="text" name="attack"></div>
+
+			<div class="stat-container" id="defense">Defense:<input type="text" name="defense"></div>
+
+			<div class="stat-container" id="spattack">SP Attack:<input type="text" name="spattack"></div>
+
+			<div class="stat-container" id="spdefense">SP Defense:<input type="text" name="spdefense"></div>
+
+			<div class="stat-container" id="speed">Speed:<input type="text" name="speed"></div>
+
+		</div>
+
+		<div id="edit-container">
+			<input type="submit" name="click" value="create pokemon!" /> | <a href="/">return</a>
+
+		</div>
+	</div>
+</form>
+
+</body>
+</html>

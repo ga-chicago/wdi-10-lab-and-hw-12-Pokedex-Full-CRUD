@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Poke-Index ;)</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+</head>
+<body>
+
+<div class="bigwrap">
+	<h1>Pokedex Index</h1>
+
+	<a href="/new">Add Pokemon</a> </br> </br>
+
+	<div id="list-container">
+		<% for (let i = 0; i < data.length; i++) { %>
+			<div class="list-display"> <a href="/<%= i %>/"> #<%= data[i].id%>: <%= data[i].name %>  </br>
+			<img id="index-pic" src="<%= data[i].img %>"> </a> </div> </br> </br>
+		<% } %>
+	</div>
+</div>
+
+</body>
+</html>
